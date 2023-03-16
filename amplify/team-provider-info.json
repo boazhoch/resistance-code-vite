@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-resistancecodevite-staging-133318-authRole",
+      "UnauthRoleArn": "arn:aws:iam::564445131558:role/amplify-resistancecodevite-staging-133318-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::564445131558:role/amplify-resistancecodevite-staging-133318-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-resistancecodevite-staging-133318-deployment",
+      "UnauthRoleName": "amplify-resistancecodevite-staging-133318-unauthRole",
+      "StackName": "amplify-resistancecodevite-staging-133318",
+      "StackId": "arn:aws:cloudformation:eu-west-3:564445131558:stack/amplify-resistancecodevite-staging-133318/1d3f7c10-c3ff-11ed-832c-0e6447fde7b8",
+      "AmplifyAppId": "d1dt6ealpi2m6j"
+    },
+    "categories": {
+      "auth": {
+        "resistancecodevite": {}
+      }
+    }
+  }
+}

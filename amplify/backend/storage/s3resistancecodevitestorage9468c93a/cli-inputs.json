@@ -1,0 +1,10 @@
+{
+  "resourceName": "s3resistancecodevitestorage9468c93a",
+  "bucketName": "resistance-code-vite-storage-9468c93a",
+  "policyUUID": "87f89fcc",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ]
+}

@@ -4,7 +4,8 @@ window.global ||= window;
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import "./index.css";
+import "./tailwind.css";
+import "./main.css";
 import { Amplify } from "aws-amplify";
 
 //@ts-ignore

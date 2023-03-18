@@ -4,6 +4,9 @@ import resolve from "@rollup/plugin-node-resolve";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    port: 3000,
+  },
   define: {
     global: "window",
   },

@@ -21,11 +21,15 @@ const isLocalhost = Boolean(
 );
 
 // Assuming you have two redirect URIs, and the first is for localhost and second is for production
-const [localRedirectSignIn, productionRedirectSignIn] =
-  config.oauth.redirectSignIn.split(",");
+const [
+  productionRedirectSignIn,
+  localRedirectSignIn = "http://localhost:3000/",
+] = config.oauth.redirectSignIn.split(",");
 
-const [localRedirectSignOut, productionRedirectSignOut] =
-  config.oauth.redirectSignOut.split(",");
+const [
+  productionRedirectSignOut,
+  localRedirectSignOut = "http://localhost:3000/",
+] = config.oauth.redirectSignOut.split(",");
 
 const updatedConfig = {
   ...config,

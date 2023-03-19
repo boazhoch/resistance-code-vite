@@ -8,7 +8,7 @@ const Login = ({
   renderWhenUserLoggedIn: (user?: object) => React.ReactNode;
 }) => {
   const [user, setUser] = useState(null);
-  const [customState, setCustomState] = useState(null);
+
   useEffect(() => {
     const unsubscribe = Hub.listen("auth", ({ payload: { event, data } }) => {
       switch (event) {
@@ -19,9 +19,6 @@ const Login = ({
         case "signOut":
           setUser(null);
           break;
-
-        case "customOAuthState":
-          setCustomState(data);
       }
     });
     Auth.currentAuthenticatedUser()
@@ -53,7 +50,7 @@ const Login = ({
             });
           }}
         >
-          התחבר/י
+          התחבר/י כדי להעלאות קבצים
         </button>
       )}
     </>

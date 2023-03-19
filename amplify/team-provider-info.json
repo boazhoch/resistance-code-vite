@@ -14,6 +14,9 @@
     "categories": {
       "auth": {
         "resistancecodevite": {}
+      },
+      "storage": {
+        "s3resistancecodevitestorage9468c93a": {}
       }
     }
   }

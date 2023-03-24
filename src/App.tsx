@@ -110,7 +110,7 @@ function App() {
           <CitySelection
             selected={city}
             setSelectedCity={(selectedCity) => {
-              setCity(selectedCity);
+              setCity(selectedCity.trim());
             }}
           />
           <div className="relative mr-2">

@@ -33,13 +33,12 @@ export const useGeo = () => {
 
     req.searchParams.append("latitude", latitude);
     req.searchParams.append("longitude", longitude);
+    req.searchParams.append("localityLanguage", "he");
 
     fetch(req)
       .then((response) => {
         if (response.ok) {
           response.json().then((responseData: { city: string }) => {
-            console.log(responseData);
-
             setState((value) => ({
               city: responseData.city,
               isLoading: false,

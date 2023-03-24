@@ -21,24 +21,17 @@ import { Container, Engine } from "tsparticles-engine";
 
 import { FileUplaod } from "./FilePond";
 
-const date = dayjs().format("DD_MM_YY");
-
-export const UserContext = createContext({ email: "", city: "" });
+export const UserContext = createContext({ date: "", city: "" });
 
 const FileUploader = () => {
   const userCtx = useContext(UserContext);
   const [done, setDone] = useState(false);
 
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
     // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container?: Container) => {
-    await console.log(container);
   }, []);
 
   return (
@@ -82,8 +75,7 @@ const FileUploader = () => {
 
               options: ProcessServerChunkTransferOptions
             ) => {
-              console.log(userCtx, fieldName, metadata, file);
-              Storage.put(`${date}/${userCtx.city}/${file.name}`, file)
+              Storage.put(`${userCtx.date}/${userCtx.city}/${file.name}`, file)
                 .then((response) => {
                   load(response.key);
                 })
@@ -96,7 +88,6 @@ const FileUploader = () => {
           <Particles
             id="tsparticles"
             init={particlesInit}
-            loaded={particlesLoaded}
             options={{
               detectRetina: true,
               fullScreen: {

@@ -26,7 +26,7 @@ const Login = ({
       .catch(() => console.log("Not signed in"));
     return unsubscribe;
   }, []);
-  console.log(user);
+
   return (
     <>
       {user ? (

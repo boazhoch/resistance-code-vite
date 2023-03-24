@@ -49,9 +49,6 @@ export const FileUplaod = ({
       server={{ process }}
       onprocessfiles={onprocessfiles}
       name="files" /* sets the file input name, it's filepond by default */
-      oninit={() => {
-        console.log("init");
-      }}
       onupdatefiles={(fileItems) => {
         // Set currently active file objects to state
         setState({

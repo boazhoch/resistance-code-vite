@@ -4,11 +4,6 @@ import { useGeo } from "./components/GeoLocation";
 import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 
-const date = new Date();
-const futureDate = date.getDate() + 3;
-date.setDate(futureDate);
-const defaultValue = date.toLocaleDateString("he");
-
 const CitySelection = (props: {
   selected?: string;
   setSelectedCity: (city: string) => void;

@@ -42,15 +42,19 @@ const Login = ({
         </>
       ) : (
         <button
-          className="bg-blue-600 hover:text-blue-600 hover:bg-white text-white font-bold py-2 px-4 shadow-md rounded transition-all duration-200 ease-in-out"
+          className="hover:bg-white text-black h-5/6 w-5/6 mt-5 font-bold border-2 border-dashed	border-blue-300	rounded transition-all duration-200 ease-in-out"
           type="button"
           onClick={() => {
             Auth.federatedSignIn({
               provider: CognitoHostedUIIdentityProvider.Google,
             });
           }}
+          style={{ backgroundColor: "rgba(201, 219, 255, 0.1)" }}
         >
-          התחבר/י כדי להעלאות קבצים
+          <div className="flex flex-col items-center justify-center ">
+            <img className="" src="upload.png" width={200} />
+            <h2 style={{fontSize: "1.3em"}}> יאללה להעלות!</h2>
+          </div>
         </button>
       )}
     </>

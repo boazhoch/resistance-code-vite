@@ -14,18 +14,34 @@ function App() {
   const [date, setDate] = useState(dayjs(new Date()).format("YYYY-MM-DD"));
 
   return (
-    <main className="p-3">
-      <div className="text-center m-auto mb-2 w-10% max-w-[50px]">
-        <img src="logo.jpeg" width={50} />
-      </div>
-      <h1
-        className="text-black font-bold text-center mb-5"
-        style={{ fontSize: "12vmin", lineHeight: "normal" }}
+    <main className="flex flex-col md:flex-row h-screen">
+      <div
+        className="flex flex-col items-center md:items-start justify-between h-1/2 md:h-full md:w-1/2 py-5"
+        style={{ backgroundColor: "#3278FF" }}
       >
-        יאללה תקווה שליחת סרטונים
-      </h1>
-      <div className="text-center">
-        <div className="m-auto mb-3 w-full max-w-4xl flex justify-center items-center">
+        <div className="mb-2 w-10% max-w-[50px] md:mr-10">
+          <img src="logo.png" width={50} />
+        </div>
+        <div className="text-center md:text-right md:mr-10">
+          <h2 style={{ fontSize: "6vmin", lineHeight: "normal" }}>
+            יאללה תקווה
+          </h2>
+          <h1
+            className="font-bold text-white mb-5"
+            style={{ fontSize: "14vmin", lineHeight: "normal" }}
+          >
+            העלאת סרטונים
+          </h1>
+        </div>
+        <div className="text-center md:text-right md:mr-10">
+          <h2 style={{ fontSize: "6vmin", lineHeight: "normal" }}>
+            # להיות עם חופשי בארצנו
+          </h2>
+        </div>
+      </div>
+
+      <div className="text-center h-1/2 md:w-1/2 md:h-screen">
+        <div className="m-auto mb-3 mt-5 w-full max-w-4xl flex justify-center items-center">
           <CitySelection
             selected={city}
             setSelectedCity={(selectedCity) => {
